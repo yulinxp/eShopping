@@ -114,6 +114,7 @@ export class AppComponent {
         this.cartItems = [];      //hack! because of fake API fake result
         //this.getCartData(this.loggedObj.custId);
 
+        this.productSrv.itemRemoved.next(true);
 
       } else {
         alert(res.message)

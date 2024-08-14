@@ -13,6 +13,8 @@ export class ProductService {
 
   userHasLogin: Subject<boolean> = new Subject<boolean>();
 
+  itemRemoved: Subject<boolean> = new Subject<boolean>();
+
   constructor(private http: HttpClient) { }
 
   private apiUrl = 'https://fakestoreapi.com/products';

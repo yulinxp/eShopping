@@ -31,6 +31,13 @@ export class CheckoutComponent implements OnInit {
       this.loggedObj = parseObj;
       this.getCartData(this.loggedObj.custId)
     }
+
+    this.productSrv.itemRemoved.subscribe(isItemRemoved => {
+
+      if(isItemRemoved) {
+        this.cartItems = [];
+      }
+    });
   }
 
   ngOnInit(): void {
