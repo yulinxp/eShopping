@@ -101,6 +101,8 @@ export class AppComponent {
         this.loginModelClass = '';
         localStorage.setItem('my_user', JSON.stringify(this.loggedObj));
         // this.getCartData(this.loggedObj.custId)
+
+        this.productSrv.userHasLogin.next(true);
     }
     )
   }

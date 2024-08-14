@@ -19,6 +19,20 @@ export class ProductsComponent implements OnInit{
       const parseObj =  JSON.parse(localData);
       this.loggedObj = parseObj;
     }
+
+    this.productSrv.userHasLogin.subscribe(isLoggedIn => {
+
+      const localData = localStorage.getItem('my_user');
+      if(localData != null) {
+        const parseObj =  JSON.parse(localData);
+        this.loggedObj = parseObj;
+      }
+      // if (isLoggedIn) {
+      //   console.log('User logged in');
+      // } else {
+      //   console.log('User logged out');
+      // }
+    });
   }
 
   ngOnInit(): void {

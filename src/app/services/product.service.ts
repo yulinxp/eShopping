@@ -11,6 +11,8 @@ export class ProductService {
 
   showLogin: Subject<boolean> = new Subject<boolean>();
 
+  userHasLogin: Subject<boolean> = new Subject<boolean>();
+
   constructor(private http: HttpClient) { }
 
   private apiUrl = 'https://fakestoreapi.com/products';
