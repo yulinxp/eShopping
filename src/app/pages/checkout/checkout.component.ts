@@ -96,5 +96,7 @@ export class CheckoutComponent implements OnInit {
     //     alert(res.message)
     //   }
     // })
+
+    this.productSrv.itemRemoved.next(true);
   }
 }

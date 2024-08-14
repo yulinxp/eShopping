@@ -42,6 +42,12 @@ export class AppComponent {
          this.loginModelClass = 'show';
       }
     })
+
+    this.productSrv.itemRemoved.subscribe(isItemRemoved => {
+      if(isItemRemoved) {
+        this.cartItems = [];
+      }
+    });
   }
 
   getCartData(id: number) {
