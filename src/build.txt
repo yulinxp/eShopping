@@ -1,0 +1,4 @@
+ng build --base-href "https://yulinxp.github.io/e-shopping/"
+
+
+npx angular-cli-ghpages --dir=dist/repo-name
